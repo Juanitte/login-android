@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <ImageView
+        android:id="@+id/img_bs2"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/blue_square" />
+
+    <Switch
+        android:id="@+id/switch_theme2"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toEndOf="@+id/img_spain"
+        app:layout_constraintTop_toBottomOf="@+id/switch_theme" />
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="49dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/lbl_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="143dp"
+        android:text="Language: "
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_theme" />
+
+    <TextView
+        android:id="@+id/lbl_settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="112dp"
+        android:editable="false"
+        android:text="SimpleLogin"
+        android:textColor="#1B1B1B"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="108dp"
+        android:text="Theme: "
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_settings_title" />
+
+    <Switch
+        android:id="@+id/switch_theme"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@+id/img_sun"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_settings_title" />
+
+    <ImageView
+        android:id="@+id/img_sun"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintEnd_toStartOf="@+id/switch_theme"
+        app:layout_constraintStart_toEndOf="@+id/lbl_theme"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_settings_title"
+        app:srcCompat="@drawable/sun" />
+
+    <ImageView
+        android:id="@+id/img_spain"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/switch_theme"
+        app:layout_constraintStart_toEndOf="@+id/lbl_language"
+        app:layout_constraintTop_toBottomOf="@+id/img_sun"
+        app:srcCompat="@drawable/spain" />
+
+    <ImageView
+        android:id="@+id/img_moon"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="101dp"
+        app:layout_constraintStart_toEndOf="@+id/switch_theme"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_settings_title"
+        app:srcCompat="@drawable/moon" />
+
+    <ImageView
+        android:id="@+id/img_uk"
+        android:layout_width="53dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toEndOf="@+id/switch_theme2"
+        app:layout_constraintTop_toBottomOf="@+id/img_moon"
+        app:srcCompat="@drawable/uk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
