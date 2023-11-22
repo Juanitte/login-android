@@ -20,6 +20,11 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
         val imgBack: ImageView = findViewById(R.id.img_back)
+        if(AppData.isDarkMode) {
+            imgBack.setImageResource(R.drawable.back_dm)
+        } else {
+            imgBack.setImageResource(R.drawable.back)
+        }
 
         imgBack.setOnClickListener {
             if(!AppData.isLogged) {
@@ -74,9 +79,15 @@ class SettingsActivity : AppCompatActivity() {
             if (isChecked) {
                 AppData.isDarkMode = true
                 changeTheme(true)
+                val refreshIntent = Intent(this, javaClass)
+                startActivity(refreshIntent)
+                finish()
             } else {
                 AppData.isDarkMode = false
                 changeTheme(false)
+                val refreshIntent = Intent(this, javaClass)
+                startActivity(refreshIntent)
+                finish()
             }
         }
         switchLanguage.setOnCheckedChangeListener { buttonView, isChecked ->

@@ -11,11 +11,23 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import com.example.loginjuanhermo.util.AppData
+import java.util.Locale
 
 class LoginActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if(!AppData.isEnglish) {
+            val locale = Locale("es")
+            val config = resources.configuration
+            config.setLocale(locale)
+            resources.updateConfiguration(config, resources.displayMetrics)
+        } else{
+            val locale = Locale("en")
+            val config = resources.configuration
+            config.setLocale(locale)
+            resources.updateConfiguration(config, resources.displayMetrics)
+        }
         setContentView(R.layout.activity_login)
 
         val btnLogout: Button = findViewById(R.id.btn_logout)
